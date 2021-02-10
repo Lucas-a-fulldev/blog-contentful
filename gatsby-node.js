@@ -20,7 +20,7 @@ exports.createPages = async({ graphql, actions }) => {
       }
     }
   }
-   `)
+  `)
   const postTemplate = path.resolve('src/templates/post.js')
   posts.data.posts.edges.forEach(post => {
     createPage({
