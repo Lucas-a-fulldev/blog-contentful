@@ -5,14 +5,14 @@ import Image from 'gatsby-image'
 import { BLOCKS, MARKS } from '@contentful/rich-text-types'
 import { documentToReactComponents }  from '@contentful/rich-text-react-renderer'
 
-const options = {
+const options ={/*   {
   renderMark: {
     [MARKS.BOLD]: text => <strong>{strong}</strong>
   },
   renderBlock: {
     [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>
   }
-}
+} */}
 
 
 const Post = ({ data, ...props }) => {
@@ -26,7 +26,7 @@ const Post = ({ data, ...props }) => {
           }} 
           />
           <div>
-            {documentToReactComponents(data.contentfulPost.contentRich.json, options)}
+          {/*   {documentToReactComponents(data.contentfulPost.contentRich.json, options)} */}
           </div>
       <pre>{JSON.stringify(props, null,  2)}</pre>
     </div>
@@ -47,9 +47,6 @@ query  ($slug: String!) {
         ...GatsbyContentfulFixed
       }
     }
-    contentRich{
-      json
-  }
   }
 }
 `
